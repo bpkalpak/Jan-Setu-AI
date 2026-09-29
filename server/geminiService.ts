@@ -4,18 +4,15 @@ import { GoogleGenAI, Type } from '@google/genai';
 // gemini-3.1-flash-lite is the official low-latency, high-throughput model ideal for fast structured classification & summarization
 export const CLASSIFICATION_MODEL = 'gemini-3.1-flash-lite';
 export const GENERAL_TEXT_MODEL = 'gemini-3.1-flash-lite';
-export const SECONDARY_TEXT_MODEL = 'gemini-3.8-flash';
+export const SECONDARY_TEXT_MODEL = 'gemini-2.5-flash';
 
 // Chat and Live models adhering to guidelines:
-// gemini-3.1-pro-preview for particularly complex tasks
-// gemini-3.8-flash for general tasks
-// gemini-3.1-flash-lite for tasks that should happen fast
-// gemini-3.8-live for real-time voice conversations
+// Using gemini-3.1-flash-lite as primary general model to avoid token quota exhaustion on 3.8-flash
 export const CHAT_MODELS = {
-  GENERAL: 'gemini-3.8-flash',
+  GENERAL: 'gemini-3.1-flash-lite',
   FAST: 'gemini-3.1-flash-lite',
-  COMPLEX: 'gemini-3.1-pro-preview',
-  LIVE: 'gemini-3.8-live'
+  COMPLEX: 'gemini-2.5-flash',
+  LIVE: 'gemini-2.5-flash'
 } as const;
 
 // Lazy initialization of GoogleGenAI
@@ -58,7 +55,7 @@ function isModelInCooldown(modelName: string): boolean {
   return true;
 }
 
-function setModelCooldown(modelName: string, durationMs: number = 60000): void {
+function setModelCooldown(modelName: string, durationMs: number = 120000): void {
   modelQuotaCooldown.set(modelName, Date.now() + durationMs);
 }
 
@@ -69,9 +66,13 @@ function isQuotaExhaustedError(err: any): boolean {
     statusCode === 429 ||
     errorMsg.includes('429') ||
     errorMsg.includes('RESOURCE_EXHAUSTED') ||
+    errorMsg.includes('resource_exhausted') ||
     errorMsg.includes('Quota exceeded') ||
     errorMsg.includes('free_tier') ||
-    errorMsg.includes('rate limit')
+    errorMsg.includes('rate limit') ||
+    errorMsg.includes('limit: 25000000') ||
+    errorMsg.includes('generate_content_tokens_per_model_per_user') ||
+    errorMsg.includes('exceeded your current quota')
   );
 }
 
@@ -726,12 +727,16 @@ Based on the Bangalore Rural & Peri-Urban Governance Dataset (Census 2011 baseli
     };
   } catch (err: any) {
     console.warn(`[runGeminiChat Info with ${targetModel}]:`, err?.message || err);
-    // If the error was related to complex model availability, retry with general model
-    if (targetModel === CHAT_MODELS.COMPLEX) {
+    if (isQuotaExhaustedError(err)) {
+      setModelCooldown(targetModel, 180000);
+    }
+
+    // If target model failed, attempt fallback with ultra-low token gemini-3.1-flash-lite
+    if (targetModel !== 'gemini-3.1-flash-lite' && !isModelInCooldown('gemini-3.1-flash-lite')) {
       try {
-        console.warn(`[runGeminiChat] Retrying complex prompt with ${CHAT_MODELS.GENERAL}...`);
+        console.warn(`[runGeminiChat] Retrying prompt with gemini-3.1-flash-lite...`);
         const fallbackRes = await ai.models.generateContent({
-          model: CHAT_MODELS.GENERAL,
+          model: 'gemini-3.1-flash-lite',
           contents: messages.map(m => ({
             role: m.role === 'model' ? 'model' : 'user',
             parts: [{ text: m.content }]
@@ -739,12 +744,14 @@ Based on the Bangalore Rural & Peri-Urban Governance Dataset (Census 2011 baseli
           config: { systemInstruction, temperature: 0.7 }
         });
         return {
-          reply: fallbackRes.text || 'Analysis completed via general model.',
-          modelUsed: CHAT_MODELS.GENERAL,
+          reply: fallbackRes.text || 'Analysis completed via low-latency model.',
+          modelUsed: 'gemini-3.1-flash-lite',
           rolePreset
         };
       } catch (innerErr) {
-        // Continue to fallback below
+        if (isQuotaExhaustedError(innerErr)) {
+          setModelCooldown('gemini-3.1-flash-lite', 180000);
+        }
       }
     }
 

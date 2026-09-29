@@ -112,7 +112,14 @@ class DataService {
 
   public loadData() {
     try {
-      const dataDir = path.join(process.cwd(), 'data');
+      const candidates = [
+        path.join(process.cwd(), 'data'),
+        path.resolve('data'),
+        path.join(__dirname, '..', 'data'),
+        path.join(__dirname, 'data'),
+        path.join('/var/task', 'data')
+      ];
+      const dataDir = candidates.find(dir => fs.existsSync(path.join(dir, 'infrastructure_features_bangalore.csv'))) || candidates[0];
       const infraPath = path.join(dataDir, 'infrastructure_features_bangalore.csv');
       const amenitiesPath = path.join(dataDir, 'village_amenities_bangalore_clean.csv');
       const requestsPath = path.join(dataDir, 'citizen_requests_bangalore_synthetic.csv');
