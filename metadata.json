@@ -1,0 +1,7 @@
+{
+  "name": "JanSetu AI — Citizen Demand & Infrastructure Platform",
+  "description": "Citizen Demand & Infrastructure Intelligence Platform for governance, infrastructure gap analysis, and deterministic priority mapping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

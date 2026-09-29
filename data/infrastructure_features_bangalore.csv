@@ -1,0 +1,191 @@
+village_code,village_name,sub_district_name,district_name,state_name,population,households,area_hectares,water_gap,drainage_gap,waste_gap,road_gap,healthcare_gap,education_gap,digital_gap,transport_gap,electricity_gap,banking_gap,population_density_per_hectare,infrastructure_gap_count,infrastructure_features_observed,infrastructure_gap_ratio
+612749,Gopalapura,Bangalore North,Bangalore,KARNATAKA,1026,232,397.63,0,0,1,0,0,0,0,0,0,1,2.58,2,10,0.2
+612750,Kukkanahalli,Bangalore North,Bangalore,KARNATAKA,935,205,462.37,0,0,1,0,1,0,0,0,0,1,2.02,3,10,0.3
+612751,Shamabhattara Palya,Bangalore North,Bangalore,KARNATAKA,297,58,58.39,0,0,1,0,1,0,0,0,0,1,5.09,3,10,0.3
+612752,Totagere,Bangalore North,Bangalore,KARNATAKA,1165,212,322.02,0,0,1,0,1,0,0,0,0,1,3.62,3,10,0.3
+612753,Bommasettihalli,Bangalore North,Bangalore,KARNATAKA,281,75,107.4,0,0,1,0,1,0,0,0,0,1,2.62,3,10,0.3
+612754,Syadamipalya,Bangalore North,Bangalore,KARNATAKA,162,35,30.81,0,0,1,0,1,1,0,0,0,1,5.26,4,10,0.4
+612755,Bethanagere,Bangalore North,Bangalore,KARNATAKA,977,217,484.54,0,0,1,0,1,0,0,0,0,1,2.02,3,10,0.3
+612756,Rampalya,Bangalore North,Bangalore,KARNATAKA,233,58,65.42,0,0,1,0,1,0,0,0,0,1,3.56,3,10,0.3
+612757,Huskur,Bangalore North,Bangalore,KARNATAKA,1320,324,417.91,0,0,1,0,0,0,0,0,0,1,3.16,2,10,0.2
+612758,Agrahara Palya,Bangalore North,Bangalore,KARNATAKA,225,45,79.68,0,0,1,0,1,0,0,0,0,1,2.82,3,10,0.3
+612759,Hosahalli Palya,Bangalore North,Bangalore,KARNATAKA,425,94,91.84,0,0,1,0,1,0,0,0,0,1,4.63,3,10,0.3
+612760,Govindapura,Bangalore North,Bangalore,KARNATAKA,289,72,78.39,0,0,1,0,0,0,0,0,0,1,3.69,2,10,0.2
+612761,Honnasandra,Bangalore North,Bangalore,KARNATAKA,1059,228,181.75,0,0,1,0,1,0,0,0,0,1,5.83,3,10,0.3
+612762,Huchana Palya,Bangalore North,Bangalore,KARNATAKA,261,63,57.24,0,0,1,0,1,0,0,0,0,1,4.56,3,10,0.3
+612763,Pillahalli,Bangalore North,Bangalore,KARNATAKA,1072,239,337.96,0,0,1,0,1,0,0,0,0,1,3.17,3,10,0.3
+612764,Nagarur,Bangalore North,Bangalore,KARNATAKA,2040,518,404.39,0,0,1,0,1,0,0,0,0,1,5.04,3,10,0.3
+612765,Kodipalya,Bangalore North,Bangalore,KARNATAKA,171,40,23.74,0,0,1,0,1,1,0,0,0,1,7.2,4,10,0.4
+612766,Seshagiri Rao Palya,Bangalore North,Bangalore,KARNATAKA,55,13,37.73,1,1,1,0,1,1,0,0,0,1,1.46,6,10,0.6
+612767,Mariyanapalya,Bangalore North,Bangalore,KARNATAKA,150,32,89.42,0,0,1,0,1,0,0,0,0,1,1.68,3,10,0.3
+612768,Mathahalli,Bangalore North,Bangalore,KARNATAKA,890,220,249.62,0,0,1,0,0,0,0,0,0,1,3.57,2,10,0.2
+612769,Narasipura,Bangalore North,Bangalore,KARNATAKA,548,128,132.22,0,0,1,0,1,0,0,0,0,1,4.14,3,10,0.3
+612770,Torenagasandra,Bangalore North,Bangalore,KARNATAKA,885,208,108.69,0,0,1,0,1,0,0,0,0,1,8.14,3,10,0.3
+612771,Muniyanapalya,Bangalore North,Bangalore,KARNATAKA,97,21,89.42,0,0,1,0,1,1,0,0,0,1,1.08,4,10,0.4
+612772,Vaderahalli,Bangalore North,Bangalore,KARNATAKA,759,176,143.05,0,0,1,0,1,0,0,0,0,1,5.31,3,10,0.3
+612773,Alur,Bangalore North,Bangalore,KARNATAKA,1962,467,418.63,0,0,1,0,1,0,0,0,0,1,4.69,3,10,0.3
+612774,Kuduragere,Bangalore North,Bangalore,KARNATAKA,2425,589,300.4,0,0,1,0,0,0,0,0,0,1,8.07,2,10,0.2
+612775,Thammenahalli,Bangalore North,Bangalore,KARNATAKA,1256,308,172.63,0,0,1,0,1,0,0,0,0,1,7.28,3,10,0.3
+612776,Hanumantha Sagara,Bangalore North,Bangalore,KARNATAKA,649,176,45.17,0,0,1,0,1,0,0,0,0,0,14.37,2,10,0.2
+612777,Heggadadevanapura,Bangalore North,Bangalore,KARNATAKA,4820,1254,181.37,0,0,1,0,1,0,0,0,0,1,26.58,3,10,0.3
+612778,Makali,Bangalore North,Bangalore,KARNATAKA,2873,744,79.49,0,0,1,0,0,0,0,0,0,1,36.14,2,10,0.2
+612779,Adakamaranahalli,Bangalore North,Bangalore,KARNATAKA,4137,1056,90.64,0,0,1,0,1,0,0,0,0,1,45.64,3,10,0.3
+612780,Dasanapura,Bangalore North,Bangalore,KARNATAKA,4551,1168,408.99,0,0,1,0,0,0,0,0,0,1,11.13,2,10,0.2
+612781,Gejjagadahalli,Bangalore North,Bangalore,KARNATAKA,1052,251,66.36,0,0,1,0,1,0,0,0,0,1,15.85,3,10,0.3
+612782,Hullegowdanahalli,Bangalore North,Bangalore,KARNATAKA,1366,305,395.46,0,0,1,0,1,0,0,0,0,1,3.45,3,10,0.3
+612783,Byregowdanahalli,Bangalore North,Bangalore,KARNATAKA,673,173,146.65,0,0,1,0,1,0,0,0,0,1,4.59,3,10,0.3
+612784,Venkatapura,Bangalore North,Bangalore,KARNATAKA,172,40,94.55,0,0,1,0,1,1,0,0,0,1,1.82,4,10,0.4
+612785,Lakkenahalli,Bangalore North,Bangalore,KARNATAKA,955,205,219.87,0,0,1,0,1,0,0,0,0,1,4.34,3,10,0.3
+612786,Kenganahalli,Bangalore North,Bangalore,KARNATAKA,487,91,197.39,0,0,1,0,1,0,0,0,0,1,2.47,3,10,0.3
+612787,Shivanapura,Bangalore North,Bangalore,KARNATAKA,1372,330,441.83,0,0,1,0,1,0,0,0,0,1,3.11,3,10,0.3
+612788,Gowdahalli,Bangalore North,Bangalore,KARNATAKA,586,143,222.04,0,1,1,0,1,0,0,0,0,1,2.64,4,10,0.4
+612789,Harokyathanahalli,Bangalore North,Bangalore,KARNATAKA,2513,670,291.76,0,0,1,0,1,1,0,0,0,1,8.61,4,10,0.4
+612790,Narayanappana Palya,Bangalore North,Bangalore,KARNATAKA,212,58,39.48,1,1,1,0,1,1,0,0,0,1,5.37,6,10,0.6
+612791,Madavara,Bangalore North,Bangalore,KARNATAKA,8742,2307,263.14,0,0,1,0,1,0,0,0,0,1,33.22,3,10,0.3
+612792,Siddanahosahalli,Bangalore North,Bangalore,KARNATAKA,6165,1694,79.02,0,0,1,0,1,0,0,0,0,0,78.02,2,10,0.2
+612793,Dombarahalli,Bangalore North,Bangalore,KARNATAKA,2640,724,102.77,0,0,1,0,1,0,0,0,0,1,25.69,3,10,0.3
+612794,Gavipalya,Bangalore North,Bangalore,KARNATAKA,320,75,35.12,0,0,1,0,1,0,0,0,0,1,9.11,3,10,0.3
+612795,Kadaranahalli,Bangalore North,Bangalore,KARNATAKA,412,88,170.88,0,0,1,0,1,0,0,0,0,1,2.41,3,10,0.3
+612796,Avverahalli,Bangalore North,Bangalore,KARNATAKA,415,101,261.4,0,0,1,0,1,0,0,0,0,1,1.59,3,10,0.3
+612797,Hunnigere,Bangalore North,Bangalore,KARNATAKA,644,154,272.2,0,0,0,0,1,0,0,0,0,1,2.37,2,10,0.2
+612798,Sondekoppa,Bangalore North,Bangalore,KARNATAKA,4045,881,614.89,0,0,1,0,0,0,0,0,0,0,6.58,1,10,0.1
+612799,Nagasandra,Bangalore North,Bangalore,KARNATAKA,253,58,189.44,0,0,1,0,0,0,0,0,0,1,1.34,2,10,0.2
+612800,Mallasandra,Bangalore North,Bangalore,KARNATAKA,830,193,307.95,0,0,1,0,0,0,0,0,0,1,2.7,2,10,0.2
+612801,Gollarapalya,Bangalore North,Bangalore,KARNATAKA,41,10,58.53,0,0,1,0,1,0,0,0,0,1,0.7,3,10,0.3
+612802,Ravuthanahalli,Bangalore North,Bangalore,KARNATAKA,906,210,378.94,0,0,1,0,1,0,0,0,0,1,2.39,3,10,0.3
+612803,Kammasandra,Bangalore North,Bangalore,KARNATAKA,649,145,232.89,0,0,1,0,1,0,0,0,0,1,2.79,3,10,0.3
+612804,Lakshmipura,Bangalore North,Bangalore,KARNATAKA,1895,454,406.19,0,0,1,0,0,0,0,0,0,1,4.67,2,10,0.2
+612805,K.G.Srikantapura,Bangalore North,Bangalore,KARNATAKA,299,76,75.65,0,0,1,0,1,1,0,0,0,1,3.95,4,10,0.4
+612806,Gangondanahalli,Bangalore North,Bangalore,KARNATAKA,3420,844,282.99,0,0,1,0,1,0,0,0,0,1,12.09,3,10,0.3
+612807,K.G. Lakkenahalli,Bangalore North,Bangalore,KARNATAKA,877,197,107.87,1,1,1,0,1,0,0,0,0,1,8.13,5,10,0.5
+612808,Vaddarahalli,Bangalore North,Bangalore,KARNATAKA,361,81,152.89,0,0,1,0,1,0,0,0,0,1,2.36,3,10,0.3
+612809,Bettahalli,Bangalore North,Bangalore,KARNATAKA,840,175,201.36,0,0,1,0,1,0,0,0,0,1,4.17,3,10,0.3
+612810,Kittana Halli,Bangalore North,Bangalore,KARNATAKA,2356,563,441.42,0,0,1,0,0,0,0,0,0,1,5.34,2,10,0.2
+612811,Gattisiddanahalli,Bangalore North,Bangalore,KARNATAKA,240,52,108.84,0,0,1,0,1,0,0,0,0,1,2.21,3,10,0.3
+612812,Giddenahalli,Bangalore North,Bangalore,KARNATAKA,674,154,235.4,0,0,1,0,1,0,0,0,0,1,2.86,3,10,0.3
+612813,Kadabagere,Bangalore North,Bangalore,KARNATAKA,5235,1358,610.66,0,0,1,0,1,0,0,0,0,1,8.57,3,10,0.3
+612814,Byandahalli,Bangalore North,Bangalore,KARNATAKA,869,191,135.53,0,0,1,0,1,0,0,0,0,1,6.41,3,10,0.3
+612815,Bylakonenahalli,Bangalore North,Bangalore,KARNATAKA,490,115,171.95,0,0,1,0,1,0,0,0,0,1,2.85,3,10,0.3
+612816,Machohalli,Bangalore North,Bangalore,KARNATAKA,6468,1659,462.74,1,0,1,0,0,0,0,0,0,1,13.98,3,10,0.3
+612817,Kachohalli,Bangalore North,Bangalore,KARNATAKA,8347,2147,263.7,1,0,1,0,1,0,0,0,0,1,31.65,4,10,0.4
+612818,Ganigarahalli,Bangalore North,Bangalore,KARNATAKA,1799,406,153.97,0,0,1,0,1,0,0,0,0,1,11.68,3,10,0.3
+612819,Somashetti Halli,Bangalore North,Bangalore,KARNATAKA,2164,531,175.56,0,0,1,0,1,0,0,0,0,1,12.33,3,10,0.3
+612820,Lakshmipura (North),Bangalore North,Bangalore,KARNATAKA,3895,958,160.96,0,0,1,0,1,0,0,0,0,1,24.2,3,10,0.3
+612821,Thirumalapura,Bangalore North,Bangalore,KARNATAKA,310,68,94.28,0,0,1,0,1,0,0,0,0,1,3.29,3,10,0.3
+612822,Kodigehalli(Part),Bangalore North,Bangalore,KARNATAKA,163,39,93.0,0,0,1,0,1,0,0,0,0,1,1.75,3,10,0.3
+612823,Seegehalli,Bangalore North,Bangalore,KARNATAKA,1609,410,177.91,0,1,1,0,1,0,0,0,0,1,9.04,4,10,0.4
+612824,Kannahalli,Bangalore North,Bangalore,KARNATAKA,1579,385,389.55,0,0,1,0,0,0,0,0,0,1,4.05,2,10,0.2
+612825,Manganahalli,Bangalore North,Bangalore,KARNATAKA,2626,637,150.28,0,0,1,0,1,0,0,0,0,1,17.47,3,10,0.3
+612826,Sonnenahalli,Bangalore North,Bangalore,KARNATAKA,1343,302,648.69,0,0,0,0,0,0,0,0,0,1,2.07,1,10,0.1
+612827,Challahalli,Bangalore North,Bangalore,KARNATAKA,803,180,265.3,0,0,1,0,1,0,0,0,0,1,3.03,3,10,0.3
+612828,Haniyur,Bangalore North,Bangalore,KARNATAKA,972,237,260.24,0,1,1,0,1,0,0,0,0,1,3.74,4,10,0.4
+612829,Kakkehalli,Bangalore North,Bangalore,KARNATAKA,237,65,120.44,0,0,1,0,1,0,0,0,0,1,1.97,3,10,0.3
+612830,Nellukunte,Bangalore North,Bangalore,KARNATAKA,298,72,85.37,0,0,1,0,1,1,0,0,0,1,3.49,4,10,0.4
+612831,Kadathanamale,Bangalore North,Bangalore,KARNATAKA,500,110,315.15,0,0,1,0,1,0,0,0,0,1,1.59,3,10,0.3
+612832,Marasandra Amanikere,Bangalore North,Bangalore,KARNATAKA,2343,612,129.74,0,0,1,0,1,0,0,0,0,1,18.06,3,10,0.3
+612833,Suradenpura,Bangalore North,Bangalore,KARNATAKA,1734,366,273.2,0,0,1,0,1,0,0,0,0,1,6.35,3,10,0.3
+612834,Adde Vishwanathapura,Bangalore North,Bangalore,KARNATAKA,1762,398,619.7,0,0,1,0,1,0,0,0,0,1,2.84,3,10,0.3
+612835,Arakere,Bangalore North,Bangalore,KARNATAKA,772,182,467.35,0,0,1,0,1,0,0,0,0,1,1.65,3,10,0.3
+612836,Byrapura,Bangalore North,Bangalore,KARNATAKA,638,131,50.62,1,0,1,0,1,0,0,0,0,1,12.6,4,10,0.4
+612837,Channasandra,Bangalore North,Bangalore,KARNATAKA,167,38,72.77,0,0,1,0,1,0,0,0,0,1,2.29,3,10,0.3
+612838,Kamakshipura,Bangalore North,Bangalore,KARNATAKA,707,143,109.69,0,0,1,0,1,0,0,0,0,1,6.45,3,10,0.3
+612839,Seeresandra,Bangalore North,Bangalore,KARNATAKA,592,117,152.02,0,0,0,0,1,1,0,0,0,1,3.89,3,10,0.3
+612840,Byatha,Bangalore North,Bangalore,KARNATAKA,936,201,521.04,0,0,0,0,0,0,0,0,0,1,1.8,1,10,0.1
+612841,Kakolu,Bangalore North,Bangalore,KARNATAKA,1287,295,577.43,0,0,1,0,0,0,0,0,0,1,2.23,2,10,0.2
+612842,Budumanahalli,Bangalore North,Bangalore,KARNATAKA,561,118,162.32,1,0,1,0,1,0,0,0,0,1,3.46,4,10,0.4
+612843,Shanubhoganahalli,Bangalore North,Bangalore,KARNATAKA,993,245,183.88,0,0,0,0,1,1,0,0,0,1,5.4,3,10,0.3
+612844,Chokkanahalli,Bangalore North,Bangalore,KARNATAKA,379,85,193.5,0,0,1,0,1,0,0,0,0,1,1.96,3,10,0.3
+612845,Sreeramanahalli,Bangalore North,Bangalore,KARNATAKA,1108,272,188.68,0,0,1,0,1,0,0,0,0,1,5.87,3,10,0.3
+612846,Sadenahalli,Bangalore North,Bangalore,KARNATAKA,1463,370,290.33,0,0,1,0,1,0,0,0,0,1,5.04,3,10,0.3
+612847,Adiganahalli,Bangalore North,Bangalore,KARNATAKA,2141,538,234.05,0,0,0,0,1,0,0,0,0,1,9.15,2,10,0.2
+612848,Rajanukunte,Bangalore North,Bangalore,KARNATAKA,3813,946,134.8,0,0,1,0,0,0,0,0,0,1,28.29,2,10,0.2
+612849,Ittagallpura,Bangalore North,Bangalore,KARNATAKA,504,106,217.39,0,0,1,0,1,0,0,0,0,1,2.32,3,10,0.3
+612850,Dibburu,Bangalore North,Bangalore,KARNATAKA,623,142,204.59,0,0,1,0,1,0,0,0,0,1,3.05,3,10,0.3
+612851,Koluvarayanahalli,Bangalore North,Bangalore,KARNATAKA,378,75,121.53,0,0,1,0,1,0,0,0,0,1,3.11,3,10,0.3
+612852,Seethakempanahalli,Bangalore North,Bangalore,KARNATAKA,799,175,163.7,0,0,1,0,1,0,0,0,0,1,4.88,3,10,0.3
+612853,Hesaraghatta Grass Farm,Bangalore North,Bangalore,KARNATAKA,41,8,1189.82,0,1,1,0,1,1,0,0,0,1,0.03,5,10,0.5
+612854,Dasenahalli,Bangalore North,Bangalore,KARNATAKA,1034,236,356.95,0,0,1,0,1,0,0,0,0,1,2.9,3,10,0.3
+612855,Kalenahalli,Bangalore North,Bangalore,KARNATAKA,269,56,81.32,0,0,1,0,1,0,0,0,0,1,3.31,3,10,0.3
+612856,Mathkur,Bangalore North,Bangalore,KARNATAKA,1065,230,300.21,0,0,1,0,0,0,0,0,0,1,3.55,2,10,0.2
+612857,Linganahalli,Bangalore North,Bangalore,KARNATAKA,554,112,170.18,0,0,1,0,1,0,0,0,0,1,3.26,3,10,0.3
+612858,Muthagada Halli,Bangalore North,Bangalore,KARNATAKA,315,81,178.73,0,0,1,0,1,0,0,0,0,1,1.76,3,10,0.3
+612859,Madappanahalli,Bangalore North,Bangalore,KARNATAKA,1190,307,413.56,0,0,1,0,1,0,0,0,0,1,2.88,3,10,0.3
+612860,Krishnarajapura,Bangalore North,Bangalore,KARNATAKA,49,14,79.63,0,0,1,0,1,1,0,0,0,1,0.62,4,10,0.4
+612861,Mylappanahalli,Bangalore North,Bangalore,KARNATAKA,940,212,259.51,0,0,1,0,1,0,0,0,0,1,3.62,3,10,0.3
+612862,Lingarajapura,Bangalore North,Bangalore,KARNATAKA,224,59,42.55,0,0,1,0,1,0,0,0,0,1,5.26,3,10,0.3
+612863,Shivakote,Bangalore North,Bangalore,KARNATAKA,1762,420,315.38,0,0,1,0,1,0,0,0,0,1,5.59,3,10,0.3
+612864,Ivar Kandapura,Bangalore North,Bangalore,KARNATAKA,1834,429,392.25,0,0,0,0,1,0,0,0,0,0,4.68,1,10,0.1
+612865,Hesaraghatta,Bangalore North,Bangalore,KARNATAKA,8166,2002,630.36,0,0,1,0,0,1,0,0,0,0,12.95,2,10,0.2
+612866,Guddadahalli,Bangalore North,Bangalore,KARNATAKA,728,174,189.9,0,0,1,0,0,0,0,0,0,1,3.83,2,10,0.2
+612867,Bilijaji,Bangalore North,Bangalore,KARNATAKA,840,201,196.5,0,0,1,0,1,0,0,0,0,1,4.27,3,10,0.3
+612868,Kodagi Thirumalapura,Bangalore North,Bangalore,KARNATAKA,2092,505,211.42,0,0,1,0,1,0,0,0,0,1,9.89,3,10,0.3
+612869,Thammarasanahalli,Bangalore North,Bangalore,KARNATAKA,436,96,79.73,0,0,1,0,1,0,0,0,0,1,5.47,3,10,0.3
+612870,Madhugirihalli,Bangalore North,Bangalore,KARNATAKA,405,83,51.06,0,0,0,0,1,0,0,0,0,1,7.93,2,10,0.2
+612871,Mavallipura,Bangalore North,Bangalore,KARNATAKA,1000,218,303.17,0,0,1,0,1,0,0,0,0,1,3.3,3,10,0.3
+612872,Bylakere,Bangalore North,Bangalore,KARNATAKA,2722,660,381.16,0,0,1,0,1,0,0,0,0,1,7.14,3,10,0.3
+612873,Kondashetti Halli,Bangalore North,Bangalore,KARNATAKA,305,67,97.37,0,0,1,0,1,0,0,0,0,1,3.13,3,10,0.3
+612874,Lingarajasagara,Bangalore North,Bangalore,KARNATAKA,120,28,34.4,0,0,1,0,1,0,0,0,0,1,3.49,3,10,0.3
+612875,Kasagattapura,Bangalore North,Bangalore,KARNATAKA,2660,655,190.31,0,0,1,0,1,0,0,0,0,1,13.98,3,10,0.3
+612876,Hurali Chikkanahalli,Bangalore North,Bangalore,KARNATAKA,1901,483,270.97,0,0,1,0,1,0,0,0,0,1,7.02,3,10,0.3
+612877,Tharabana Halli,Bangalore North,Bangalore,KARNATAKA,2161,582,84.96,0,0,1,0,1,0,0,0,0,1,25.44,3,10,0.3
+612878,Sasiveghatta,Bangalore North,Bangalore,KARNATAKA,737,182,200.68,0,0,1,0,1,0,0,0,0,1,3.67,3,10,0.3
+612879,Soladevanahalli,Bangalore North,Bangalore,KARNATAKA,2940,812,155.31,0,0,1,0,1,0,0,0,0,1,18.93,3,10,0.3
+612880,Kumbarahalli,Bangalore North,Bangalore,KARNATAKA,1459,357,139.02,0,0,1,0,1,0,0,0,0,1,10.49,3,10,0.3
+612881,Kempapura,Bangalore North,Bangalore,KARNATAKA,566,134,126.09,0,0,1,0,1,0,0,0,0,1,4.49,3,10,0.3
+612882,Kalathammanahalli,Bangalore North,Bangalore,KARNATAKA,670,151,207.71,0,0,1,0,1,0,0,0,0,1,3.23,3,10,0.3
+612883,Guniagrahara,Bangalore North,Bangalore,KARNATAKA,1533,377,144.57,1,1,1,0,1,0,0,0,0,1,10.6,5,10,0.5
+612884,Tarahunase,Bangalore North,Bangalore,KARNATAKA,1864,426,609.85,1,1,1,0,1,0,0,0,0,1,3.06,5,10,0.5
+612885,Kuduragere,Bangalore North,Bangalore,KARNATAKA,1073,241,299.75,1,1,1,0,1,0,0,0,0,1,3.58,5,10,0.5
+612886,Gadenahalli,Bangalore North,Bangalore,KARNATAKA,604,122,141.43,1,1,1,0,1,0,0,0,0,1,4.27,5,10,0.5
+612887,Tharabanahalli,Bangalore North,Bangalore,KARNATAKA,1294,315,177.98,0,0,1,0,1,0,0,0,0,0,7.27,2,10,0.2
+612888,Navarathna Agrahara,Bangalore North,Bangalore,KARNATAKA,1506,317,372.81,0,1,1,0,1,0,0,0,0,0,4.04,3,10,0.3
+612889,Meenakunte,Bangalore North,Bangalore,KARNATAKA,2040,550,177.27,0,1,1,0,1,0,0,0,0,0,11.51,3,10,0.3
+612890,Channahalli,Bangalore North,Bangalore,KARNATAKA,1269,267,81.58,1,0,1,0,1,0,0,0,0,1,15.56,4,10,0.4
+612891,Byanahalli,Bangalore North,Bangalore,KARNATAKA,482,102,148.19,0,1,1,0,1,0,0,0,0,0,3.25,3,10,0.3
+612892,Papanahalli,Bangalore North,Bangalore,KARNATAKA,76,8,91.92,1,1,1,0,1,1,0,0,0,1,0.83,6,10,0.6
+612893,Thimmasandra,Bangalore North,Bangalore,KARNATAKA,797,172,204.54,1,1,1,0,1,0,0,0,0,1,3.9,5,10,0.5
+612894,Nellukunte (East),Bangalore North,Bangalore,KARNATAKA,1305,129,230.16,0,0,0,0,1,1,0,0,0,0,5.67,2,10,0.2
+612895,Bettahalasur,Bangalore North,Bangalore,KARNATAKA,3573,900,598.25,0,0,0,0,0,0,0,0,0,0,5.97,0,10,0.0
+612896,Chokkanahalli (North),Bangalore North,Bangalore,KARNATAKA,124,21,59.98,1,1,1,0,1,1,0,0,0,1,2.07,6,10,0.6
+612897,Chikkajala,Bangalore North,Bangalore,KARNATAKA,6154,1640,251.69,0,0,1,0,0,0,0,0,0,1,24.45,2,10,0.2
+612898,Maranayakana Halli,Bangalore North,Bangalore,KARNATAKA,1272,327,132.56,0,0,1,0,1,0,0,0,0,1,9.6,3,10,0.3
+612899,Doddajala,Bangalore North,Bangalore,KARNATAKA,1660,389,305.42,0,0,1,0,1,0,0,0,0,1,5.44,3,10,0.3
+612900,Settigere,Bangalore North,Bangalore,KARNATAKA,925,216,237.17,0,0,1,0,1,0,0,0,0,1,3.9,3,10,0.3
+612901,Muthugada Halli,Bangalore North,Bangalore,KARNATAKA,355,78,95.94,0,1,1,0,1,0,0,0,0,1,3.7,4,10,0.4
+612902,Begur,Bangalore North,Bangalore,KARNATAKA,434,93,185.99,0,0,1,0,1,0,0,0,0,1,2.33,3,10,0.3
+612903,Mylanahalli,Bangalore North,Bangalore,KARNATAKA,3127,737,281.84,0,1,1,0,1,0,0,0,0,1,11.09,4,10,0.4
+612904,Chikkanahalli,Bangalore North,Bangalore,KARNATAKA,291,64,93.9,0,0,1,0,1,0,0,0,0,1,3.1,3,10,0.3
+612905,Boilahalli,Bangalore North,Bangalore,KARNATAKA,392,85,142.78,0,1,1,0,1,1,0,0,0,1,2.75,5,10,0.5
+612915,Bagalur,Bangalore North,Bangalore,KARNATAKA,10320,2140,916.59,0,0,1,0,0,0,0,0,0,1,11.26,2,10,0.2
+612964,Varthur,Bangalore South,Bangalore,KARNATAKA,1347,284,223.14,0,0,1,0,0,0,0,0,0,1,6.04,2,10,0.2
+612966,Channenahalli,Bangalore South,Bangalore,KARNATAKA,4199,926,320.37,0,1,1,0,1,0,0,0,0,0,13.11,3,10,0.3
+612979,Tavarekere,Bangalore South,Bangalore,KARNATAKA,6989,1663,955.56,0,0,1,0,0,0,0,0,0,0,7.31,1,10,0.1
+612993,Chunchanakuppe,Bangalore South,Bangalore,KARNATAKA,1546,398,512.63,0,0,1,0,0,0,0,0,0,1,3.02,2,10,0.2
+613016,Ramohalli,Bangalore South,Bangalore,KARNATAKA,3975,982,422.89,0,0,1,0,0,0,0,0,0,1,9.4,2,10,0.2
+613022,Kambipura,Bangalore South,Bangalore,KARNATAKA,7018,1507,542.74,0,0,1,0,1,0,0,0,0,0,12.93,2,10,0.2
+613042,Kaggalipura,Bangalore South,Bangalore,KARNATAKA,12452,3012,939.18,0,0,0,0,0,0,0,0,0,0,13.26,0,10,0.0
+613050,Somanahalli,Bangalore South,Bangalore,KARNATAKA,4655,1158,539.78,0,0,1,0,0,0,0,0,0,1,8.62,2,10,0.2
+613056,Doddanagamangala,Bangalore South,Bangalore,KARNATAKA,5017,1259,326.78,0,0,0,0,1,0,0,0,0,1,15.35,2,10,0.2
+613076,Rampura,Bangalore East,Bangalore,KARNATAKA,2680,598,218.45,0,0,1,0,1,0,0,0,0,1,12.27,3,10,0.3
+613083,Bidarahalli,Bangalore East,Bangalore,KARNATAKA,2621,624,370.34,0,0,1,0,1,0,0,0,0,1,7.08,3,10,0.3
+613101,Avalahalli (East),Bangalore East,Bangalore,KARNATAKA,7077,1821,159.05,0,0,1,0,0,0,0,0,0,0,44.5,1,10,0.1
+613112,Kannamangala,Bangalore East,Bangalore,KARNATAKA,4381,1146,325.13,0,0,1,0,1,0,0,0,0,1,13.47,3,10,0.3
+613132,Bannerughatta,Anekal,Bangalore,KARNATAKA,8054,2092,1027.32,0,0,1,0,0,0,0,0,0,0,7.84,1,10,0.1
+613162,Thirupalya,Anekal,Bangalore,KARNATAKA,14762,4251,98.8,0,0,1,0,1,0,0,0,0,1,149.41,3,10,0.3
+613163,Yarandahalli,Anekal,Bangalore,KARNATAKA,5732,1472,237.76,0,0,1,0,1,0,0,0,0,1,24.11,3,10,0.3
+613168,Haragadde,Anekal,Bangalore,KARNATAKA,7735,2010,254.87,0,0,1,0,0,0,0,0,0,1,30.35,2,10,0.2
+613180,Hennagara,Anekal,Bangalore,KARNATAKA,2801,658,134.04,0,1,0,0,1,0,0,0,0,1,20.9,3,10,0.3
+613182,Kachanaikanahalli,Anekal,Bangalore,KARNATAKA,5606,1468,212.23,0,0,1,0,1,0,0,0,0,1,26.41,3,10,0.3
+613201,Muthanallur,Anekal,Bangalore,KARNATAKA,1663,398,237.1,0,0,1,0,0,0,0,0,0,1,7.01,2,10,0.2
+613244,Mugalur,Anekal,Bangalore,KARNATAKA,1442,330,318.05,0,0,1,0,0,0,0,0,0,1,4.53,2,10,0.2
+613254,Gollahalli,Anekal,Bangalore,KARNATAKA,7433,2160,68.97,0,0,1,0,1,0,0,0,0,1,107.77,3,10,0.3
+613255,Veerasandra,Anekal,Bangalore,KARNATAKA,9190,2595,159.75,0,0,1,0,1,0,0,0,0,1,57.53,3,10,0.3
+613256,Kammasandra,Anekal,Bangalore,KARNATAKA,9912,2749,136.77,0,1,1,0,1,0,0,0,0,1,72.47,4,10,0.4
+613261,Chandapura,Anekal,Bangalore,KARNATAKA,4562,1240,143.04,0,0,1,0,0,0,0,0,0,0,31.89,1,10,0.1
+613263,Kittaganahalli,Anekal,Bangalore,KARNATAKA,7280,2064,125.71,0,0,0,0,1,0,0,0,0,0,57.91,1,10,0.1
+613264,Banahalli,Anekal,Bangalore,KARNATAKA,5819,1673,120.22,0,0,0,0,1,0,0,0,0,0,48.4,1,10,0.1
+613268,Neralur,Anekal,Bangalore,KARNATAKA,5608,1500,424.24,0,0,1,0,1,0,0,0,0,1,13.22,3,10,0.3
+613273,Yadavanahalli,Anekal,Bangalore,KARNATAKA,6422,1744,308.83,0,0,1,0,0,0,0,0,0,1,20.79,2,10,0.2
+613289,Bidaraguppe,Anekal,Bangalore,KARNATAKA,3787,848,587.27,0,0,1,0,0,0,0,0,0,1,6.45,2,10,0.2
+613292,Ballur,Anekal,Bangalore,KARNATAKA,4572,1291,437.21,0,0,0,0,0,0,0,0,0,1,10.46,1,10,0.1
+613353,Samandur,Anekal,Bangalore,KARNATAKA,2501,540,750.84,0,0,1,0,0,0,0,0,0,1,3.33,2,10,0.2
