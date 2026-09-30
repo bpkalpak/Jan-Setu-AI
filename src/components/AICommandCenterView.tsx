@@ -175,53 +175,53 @@ export const AICommandCenterView: React.FC<AICommandCenterViewProps> = ({
       {/* Structured Insight Cards: Clear Separation of Dataset vs AI */}
       {result && (
         <div id="ai-command-analysis-results" className="space-y-6 animate-fade-in">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 text-black font-[Arial,sans-serif]" style={{ fontFamily: 'Arial, sans-serif', color: '#000000' }}>
             {/* Card 1: OBSERVED DATA (Deterministic Baseline) */}
-            <div className="lg:col-span-5 bg-white/20 backdrop-blur-md rounded-2xl border border-white/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.06),inset_0_1px_1px_0_rgba(255,255,255,0.7)] p-6 space-y-4">
+            <div className="lg:col-span-5 bg-white/20 backdrop-blur-md rounded-2xl border border-white/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.06),inset_0_1px_1px_0_rgba(255,255,255,0.7)] p-6 space-y-4 text-black" style={{ color: '#000000' }}>
               <div className="flex items-center justify-between border-b border-white/30 pb-3">
-                <div className="flex items-center gap-2 text-[#1F2A1D] font-bold text-sm">
-                  <Database strokeWidth={1.75} className="w-4 h-4 text-[#336443]" />
+                <div className="flex items-center gap-2 text-black font-bold text-sm">
+                  <Database strokeWidth={2} className="w-4 h-4 text-black" />
                   <span>OBSERVED DATA</span>
                 </div>
-                <span className="text-[10px] font-semibold bg-[#336443]/15 text-[#336443] border border-[#336443]/25 px-2.5 py-0.5 rounded-full backdrop-blur-xs">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/50 text-black border border-white/60 px-2.5 py-0.5 rounded-full backdrop-blur-xs">
                   Deterministic Baseline
                 </span>
               </div>
 
-              <div className="space-y-2.5 text-xs">
+              <div className="space-y-2.5 text-xs text-black">
                 <div className="flex justify-between py-1.5 border-b border-white/20">
-                  <span className="text-[#4B5B47]">Village & Taluk</span>
-                  <span className="font-semibold text-[#1F2A1D]">
+                  <span className="text-black/80 font-medium">Village & Taluk</span>
+                  <span className="font-bold text-black">
                     {result.data_derived_findings.village_name} ({result.data_derived_findings.sub_district})
                   </span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-white/20">
-                  <span className="text-[#4B5B47]">Census 2011 Population</span>
-                  <span className="font-semibold text-[#1F2A1D]">
+                  <span className="text-black/80 font-medium">Census 2011 Population</span>
+                  <span className="font-bold text-black font-mono">
                     {result.data_derived_findings.population_2011.toLocaleString()} ({result.data_derived_findings.households} households)
                   </span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-white/20">
-                  <span className="text-[#4B5B47]">Geographic Area</span>
-                  <span className="font-semibold text-[#1F2A1D]">
+                  <span className="text-black/80 font-medium">Geographic Area</span>
+                  <span className="font-bold text-black font-mono">
                     {result.data_derived_findings.area_hectares} hectares
                   </span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-white/20">
-                  <span className="text-[#4B5B47]">Citizen Demand Volume</span>
-                  <span className="font-semibold text-[#336443]">
+                  <span className="text-black/80 font-medium">Citizen Demand Volume</span>
+                  <span className="font-bold text-black font-mono">
                     {result.data_derived_findings.total_citizen_requests} requests ({result.data_derived_findings.high_severity_requests} high severity)
                   </span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-white/20">
-                  <span className="text-[#4B5B47]">Primary Demand Category</span>
-                  <span className="font-semibold text-[#3D5638]">
+                  <span className="text-black/80 font-medium">Primary Demand Category</span>
+                  <span className="font-bold text-black">
                     {result.data_derived_findings.top_demand_category}
                   </span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-white/20">
-                  <span className="text-[#4B5B47]">Observed Priority Score</span>
-                  <span className="font-bold text-[#1F2A1D] font-mono">
+                  <span className="text-black/80 font-medium">Observed Priority Score</span>
+                  <span className="font-bold text-black font-mono">
                     {result.data_derived_findings.priority_score}/100
                   </span>
                 </div>
@@ -229,58 +229,58 @@ export const AICommandCenterView: React.FC<AICommandCenterViewProps> = ({
 
               {/* EVIDENCE Sub-section */}
               <div className="pt-2">
-                <span className="text-[11px] font-semibold text-[#4B5B47] uppercase tracking-wider block mb-2">
+                <span className="text-[11px] font-bold text-black uppercase tracking-wider block mb-2">
                   EVIDENCE: Recorded Census Gaps
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {result.data_derived_findings.documented_census_gaps.map((gap, i) => (
-                    <span key={i} className="px-2.5 py-0.5 bg-[#C25E4B]/15 text-[#C25E4B] border border-[#C25E4B]/25 rounded-full text-[11px] font-medium capitalize backdrop-blur-xs">
+                    <span key={i} className="px-2.5 py-0.5 bg-[#C25E4B]/15 text-[#C25E4B] border border-[#C25E4B]/25 rounded-full text-[11px] font-bold capitalize backdrop-blur-xs">
                       {gap} Gap
                     </span>
                   ))}
                   {result.data_derived_findings.documented_census_gaps.length === 0 && (
-                    <span className="text-[#4B5B47] italic text-xs">No historical gaps in observed baseline</span>
+                    <span className="text-black/80 italic text-xs font-medium">No historical gaps in observed baseline</span>
                   )}
                 </div>
               </div>
             </div>
 
             {/* Card 2: AI INTERPRETATION & SUGGESTED ACTION */}
-            <div className="lg:col-span-7 bg-white/20 backdrop-blur-md rounded-2xl border border-white/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.06),inset_0_1px_1px_0_rgba(255,255,255,0.7)] p-6 space-y-4">
+            <div className="lg:col-span-7 bg-white/20 backdrop-blur-md rounded-2xl border border-white/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.06),inset_0_1px_1px_0_rgba(255,255,255,0.7)] p-6 space-y-4 text-black" style={{ color: '#000000' }}>
               <div className="flex items-center justify-between border-b border-white/30 pb-3">
-                <div className="flex items-center gap-2 text-[#1F2A1D] font-bold text-sm">
-                  <Brain strokeWidth={1.75} className="w-4 h-4 text-[#336443]" />
+                <div className="flex items-center gap-2 text-black font-bold text-sm">
+                  <Brain strokeWidth={2} className="w-4 h-4 text-black" />
                   <span>AI INTERPRETATION</span>
                 </div>
-                <span className="text-[10px] font-semibold bg-[#336443]/15 text-[#336443] border border-[#336443]/25 px-2.5 py-0.5 rounded-full backdrop-blur-xs">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/50 text-black border border-white/60 px-2.5 py-0.5 rounded-full backdrop-blur-xs">
                   Gemini Synthesis
                 </span>
               </div>
 
-              <div className="space-y-3.5 text-xs leading-relaxed">
+              <div className="space-y-3.5 text-xs leading-relaxed text-black">
                 {/* 1. Summary */}
                 <div className="p-3.5 bg-white/30 backdrop-blur-xs rounded-xl border border-white/40 shadow-2xs">
-                  <h4 className="font-semibold text-[#1F2A1D] mb-1">Executive Summary</h4>
-                  <p className="text-[#4B5B47]">{result.ai_generated_interpretation.summary}</p>
+                  <h4 className="font-bold text-black mb-1">Executive Summary</h4>
+                  <p className="text-black/90 font-medium">{result.ai_generated_interpretation.summary}</p>
                 </div>
 
                 {/* 2. Main Demand Categories & 3. Infrastructure Gaps */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="p-3.5 bg-white/30 backdrop-blur-xs rounded-xl border border-white/40 shadow-2xs">
-                    <h4 className="font-semibold text-[#1F2A1D] mb-1">Demand Sectors</h4>
+                    <h4 className="font-bold text-black mb-1">Demand Sectors</h4>
                     <div className="flex flex-wrap gap-1 mt-1">
                       {result.ai_generated_interpretation.main_demand_categories.map((c, i) => (
-                        <span key={i} className="px-2 py-0.5 bg-[#336443]/15 text-[#336443] border border-[#336443]/25 rounded-full font-medium text-[11px] backdrop-blur-xs">
+                        <span key={i} className="px-2.5 py-0.5 bg-white/50 text-black border border-white/60 rounded-full font-bold text-[11px] backdrop-blur-xs">
                           {c}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div className="p-3.5 bg-white/30 backdrop-blur-xs rounded-xl border border-white/40 shadow-2xs">
-                    <h4 className="font-semibold text-[#1F2A1D] mb-1">Identified Deficits</h4>
+                    <h4 className="font-bold text-black mb-1">Identified Deficits</h4>
                     <div className="flex flex-wrap gap-1 mt-1">
                       {result.ai_generated_interpretation.infrastructure_gaps.map((g, i) => (
-                        <span key={i} className="px-2 py-0.5 bg-[#D98A3E]/15 text-[#B86B24] border border-[#D98A3E]/25 rounded-full font-medium text-[11px] capitalize backdrop-blur-xs">
+                        <span key={i} className="px-2.5 py-0.5 bg-[#D98A3E]/15 text-[#B86B24] border border-[#D98A3E]/25 rounded-full font-bold text-[11px] capitalize backdrop-blur-xs">
                           {g}
                         </span>
                       ))}
@@ -290,25 +290,25 @@ export const AICommandCenterView: React.FC<AICommandCenterViewProps> = ({
 
                 {/* 4. Affected Population */}
                 <div className="p-3.5 bg-white/30 backdrop-blur-xs rounded-xl border border-white/40 shadow-2xs">
-                  <h4 className="font-semibold text-[#1F2A1D] mb-1">Affected Community</h4>
-                  <p className="text-[#4B5B47]">{result.ai_generated_interpretation.affected_population}</p>
+                  <h4 className="font-bold text-black mb-1">Affected Community</h4>
+                  <p className="text-black/90 font-medium">{result.ai_generated_interpretation.affected_population}</p>
                 </div>
 
                 {/* SUGGESTED ACTION */}
-                <div className="p-4 bg-[#336443]/10 backdrop-blur-xs rounded-xl border border-[#336443]/25 space-y-1 shadow-2xs">
-                  <div className="flex items-center gap-1.5 font-bold text-[#1F2A1D]">
-                    <FileCheck strokeWidth={1.75} className="w-4 h-4 text-[#336443]" />
+                <div className="p-4 bg-white/40 backdrop-blur-xs rounded-xl border border-white/50 space-y-1 shadow-2xs text-black">
+                  <div className="flex items-center gap-1.5 font-bold text-black">
+                    <FileCheck strokeWidth={2} className="w-4 h-4 text-black" />
                     <span>SUGGESTED ACTION</span>
                   </div>
-                  <p className="text-[#1F2A1D] font-medium leading-relaxed">
+                  <p className="text-black font-semibold leading-relaxed">
                     {result.ai_generated_interpretation.suggested_intervention}
                   </p>
                 </div>
 
                 {/* Supporting Data */}
-                <div className="p-3 bg-white/30 backdrop-blur-xs rounded-xl border border-white/40 text-[11px] text-[#4B5B47] shadow-2xs">
-                  <span className="font-semibold text-[#1F2A1D]">Data Evidence Lineage: </span>
-                  <span>{result.ai_generated_interpretation.supporting_data_notes}</span>
+                <div className="p-3 bg-white/30 backdrop-blur-xs rounded-xl border border-white/40 text-[11px] text-black shadow-2xs">
+                  <span className="font-bold text-black">Data Evidence Lineage: </span>
+                  <span className="text-black/90 font-medium">{result.ai_generated_interpretation.supporting_data_notes}</span>
                 </div>
               </div>
             </div>

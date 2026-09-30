@@ -33,7 +33,10 @@ export const Header: React.FC<HeaderProps> = ({
               referrerPolicy="no-referrer"
             />
           </div>
-          <span className="text-base font-bold tracking-tight text-[#1F2A1D]">
+          <span
+            className="text-[20px] font-bold tracking-tight text-[#020402]"
+            style={{ fontSize: '20px', color: '#020402' }}
+          >
             JanSetu AI
           </span>
         </div>

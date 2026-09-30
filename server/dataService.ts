@@ -112,7 +112,12 @@ class DataService {
 
   public loadData() {
     try {
-      const dataDir = path.join(process.cwd(), 'data');
+      const candidates = [
+        path.join(process.cwd(), 'data'),
+        path.resolve('data'),
+        path.join('/var/task', 'data')
+      ];
+      const dataDir = candidates.find(dir => fs.existsSync(path.join(dir, 'infrastructure_features_bangalore.csv'))) || path.join(process.cwd(), 'data');
       const infraPath = path.join(dataDir, 'infrastructure_features_bangalore.csv');
       const amenitiesPath = path.join(dataDir, 'village_amenities_bangalore_clean.csv');
       const requestsPath = path.join(dataDir, 'citizen_requests_bangalore_synthetic.csv');
@@ -345,6 +350,9 @@ class DataService {
   }
 
   public getStats() {
+    if (this.villages.size === 0) {
+      this.loadData();
+    }
     const totalVillages = this.villages.size;
     const totalRequests = this.requests.length;
     const highSeverityRequests = this.requests.filter(r => r.severity === 'High').length;
@@ -369,10 +377,16 @@ class DataService {
   }
 
   public getAllVillages(): VillageData[] {
+    if (this.villages.size === 0) {
+      this.loadData();
+    }
     return Array.from(this.villages.values());
   }
 
   public getVillage(code: number): VillageData | undefined {
+    if (this.villages.size === 0) {
+      this.loadData();
+    }
     return this.villages.get(code);
   }
 
@@ -385,6 +399,9 @@ class DataService {
     page?: number;
     pageSize?: number;
   }) {
+    if (this.requests.length === 0) {
+      this.loadData();
+    }
     let filtered = [...this.requests];
 
     if (filters?.villageCode) {

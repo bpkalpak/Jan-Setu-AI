@@ -9,7 +9,6 @@ import {
   Building2,
   MapPin,
   Bot,
-  FileSpreadsheet,
   Plus,
   Sparkles,
   ShieldCheck,
