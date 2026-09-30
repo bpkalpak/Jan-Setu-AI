@@ -5,7 +5,8 @@ import {
   Flame,
   Building2,
   MapPin,
-  Bot
+  Bot,
+  FileSpreadsheet
 } from 'lucide-react';
 
 export type PageId =

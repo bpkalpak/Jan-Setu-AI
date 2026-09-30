@@ -12,73 +12,7 @@ import { DemoWorkflowModal } from './components/DemoWorkflowModal';
 import { OverlayNavigationMenu } from './components/OverlayNavigationMenu';
 import { StatsKPI, VillageData } from './types';
 import { api } from './services/api';
-import { RefreshCw, AlertCircle, WifiOff, FileCode2, ServerCrash } from 'lucide-react';
-
-export interface ApiErrorInfo {
-  endpoint: string;
-  category: 'connectivity' | 'parsing' | 'http' | 'unknown';
-  title: string;
-  message: string;
-  technicalDetails: string;
-}
-
-function parseApiError(err: unknown, endpointName: string, endpointPath: string): ApiErrorInfo {
-  const isSyntax = err instanceof SyntaxError;
-  const isType = err instanceof TypeError;
-  const errName = err instanceof Error ? err.name : 'UnknownError';
-  const rawMsg = err instanceof Error ? err.message : String(err);
-  const msgLower = rawMsg.toLowerCase();
-
-  // Differentiate between data parsing errors and network connectivity issues
-  const isDataParsing =
-    isSyntax ||
-    msgLower.includes('syntaxerror') ||
-    msgLower.includes('json') ||
-    msgLower.includes('unexpected token') ||
-    msgLower.includes('not valid json') ||
-    msgLower.includes('cannot parse') ||
-    msgLower.includes('malformed');
-
-  const isConnectivity =
-    !isDataParsing &&
-    (isType ||
-      msgLower.includes('failed to fetch') ||
-      msgLower.includes('network') ||
-      msgLower.includes('networkerror') ||
-      msgLower.includes('econnrefused') ||
-      msgLower.includes('connection refused') ||
-      msgLower.includes('timed out') ||
-      msgLower.includes('aborted') ||
-      msgLower.includes('offline'));
-
-  if (isDataParsing) {
-    return {
-      endpoint: endpointName,
-      category: 'parsing',
-      title: `Data Parsing Error: ${endpointName}`,
-      message: `Failed to parse response payload from ${endpointPath}. The backend returned a malformed or non-JSON body.`,
-      technicalDetails: `${errName}: ${rawMsg}`
-    };
-  }
-
-  if (isConnectivity) {
-    return {
-      endpoint: endpointName,
-      category: 'connectivity',
-      title: `Network Connectivity Issue: ${endpointName}`,
-      message: `Could not connect to ${endpointPath}. Check your network connection or verify that the local backend server is running on port 3000.`,
-      technicalDetails: `${errName}: ${rawMsg}`
-    };
-  }
-
-  return {
-    endpoint: endpointName,
-    category: 'http',
-    title: `API Request Failure: ${endpointName}`,
-    message: `Server returned an error status while retrieving ${endpointPath}.`,
-    technicalDetails: `${errName}: ${rawMsg}`
-  };
-}
+import { RefreshCw, AlertCircle } from 'lucide-react';
 
 export default function App() {
   const [activePage, setActivePage] = useState<PageId>('dashboard');
@@ -87,7 +21,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [apiError, setApiError] = useState<ApiErrorInfo | null>(null);
 
   // Active village selection for deep dive
   const [selectedVillageCode, setSelectedVillageCode] = useState<number>(612749);
@@ -106,45 +39,23 @@ export default function App() {
   };
 
   const loadInitialData = async () => {
-    setError(null);
-    setApiError(null);
-    const failureReports: ApiErrorInfo[] = [];
-    let statsData: StatsKPI | null = null;
-    let villagesData: VillageData[] = [];
-
-    // Endpoint 1: Platform KPI statistics (/api/stats)
     try {
-      statsData = await api.getStats();
-    } catch (err: unknown) {
-      console.error('[API Failure: /api/stats]', err);
-      failureReports.push(parseApiError(err, 'Platform KPI Statistics', '/api/stats'));
-    }
-
-    // Endpoint 2: Village catalog & baseline metrics (/api/villages)
-    try {
-      villagesData = await api.getVillages();
-    } catch (err: unknown) {
-      console.error('[API Failure: /api/villages]', err);
-      failureReports.push(parseApiError(err, 'Census Village Catalog', '/api/villages'));
-    }
-
-    if (failureReports.length > 0) {
-      const primary = failureReports[0];
-      setApiError(primary);
-      const combinedMessage = failureReports
-        .map((f) => `[${f.category.toUpperCase()}] ${f.title}: ${f.message} (${f.technicalDetails})`)
-        .join(' | ');
-      setError(combinedMessage);
-    } else {
+      const [statsData, villagesData] = await Promise.all([
+        api.getStats(),
+        api.getVillages()
+      ]);
       setStats(statsData);
       setVillages(villagesData);
       if (villagesData.length > 0 && !selectedVillageCode) {
         setSelectedVillageCode(villagesData[0].village_code);
       }
+    } catch (err: any) {
+      console.error('Data load error:', err);
+      setError('Could not connect to JanSetu backend. Ensure server is active on port 3000.');
+    } finally {
+      setLoading(false);
+      setIsRefreshing(false);
     }
-
-    setLoading(false);
-    setIsRefreshing(false);
   };
 
   useEffect(() => {
@@ -153,16 +64,8 @@ export default function App() {
 
   const handleRefresh = async () => {
     setIsRefreshing(true);
-    try {
-      await loadInitialData();
-      showToast('Datasets & Priority Matrix reloaded.');
-    } catch (err: unknown) {
-      console.error('Refresh catch block triggered:', err);
-      const errInfo = parseApiError(err, 'Platform Refresh', '/api/stats & /api/villages');
-      showToast(`${errInfo.title}: ${errInfo.technicalDetails}`);
-    } finally {
-      setIsRefreshing(false);
-    }
+    await loadInitialData();
+    showToast('Datasets & Priority Matrix reloaded.');
   };
 
   const handleSelectVillage = (code: number) => {
@@ -171,15 +74,9 @@ export default function App() {
   };
 
   const handleNewRequestSuccess = async (newVillageCode: number) => {
-    try {
-      await loadInitialData();
-      setSelectedVillageCode(newVillageCode);
-      showToast('Citizen grievance registered & priority engine updated.');
-    } catch (err: unknown) {
-      console.error('Post-submission data reload error:', err);
-      const errInfo = parseApiError(err, 'Grievance Post-Sync', '/api/villages');
-      showToast(`Notice: Request logged, but sync failed: ${errInfo.technicalDetails}`);
-    }
+    await loadInitialData();
+    setSelectedVillageCode(newVillageCode);
+    showToast('Citizen grievance registered & priority engine updated.');
   };
 
   return (
@@ -234,59 +131,18 @@ export default function App() {
               <p className="text-xs text-[#4B5B47]">Initializing Census 2011 baseline & citizen request telemetry</p>
             </div>
           ) : error ? (
-            <div className="p-6 bg-white/40 backdrop-blur-md border border-rose-300 rounded-2xl text-black space-y-3 font-[Arial,sans-serif] shadow-xs">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-rose-200/60 pb-3">
-                <div className="flex items-center gap-2 font-bold text-black text-sm">
-                  {apiError?.category === 'connectivity' ? (
-                    <WifiOff className="w-5 h-5 text-amber-700 flex-shrink-0" />
-                  ) : apiError?.category === 'parsing' ? (
-                    <FileCode2 className="w-5 h-5 text-purple-700 flex-shrink-0" />
-                  ) : (
-                    <ServerCrash className="w-5 h-5 text-rose-700 flex-shrink-0" />
-                  )}
-                  <span>{apiError?.title || 'API Failure Encountered'}</span>
-                </div>
-                {apiError?.category && (
-                  <span
-                    className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border self-start sm:self-auto ${
-                      apiError.category === 'connectivity'
-                        ? 'bg-amber-100 text-amber-900 border-amber-300'
-                        : apiError.category === 'parsing'
-                        ? 'bg-purple-100 text-purple-900 border-purple-300'
-                        : 'bg-rose-100 text-rose-900 border-rose-300'
-                    }`}
-                  >
-                    {apiError.category === 'connectivity'
-                      ? 'Connectivity Issue'
-                      : apiError.category === 'parsing'
-                      ? 'Data Parsing Error'
-                      : 'API Server Error'}
-                  </span>
-                )}
+            <div className="p-6 bg-rose-50 border border-rose-200 rounded-2xl text-rose-800 space-y-2">
+              <div className="flex items-center gap-2 font-semibold">
+                <AlertCircle className="w-5 h-5 text-rose-600" />
+                <span>Backend Connection Error</span>
               </div>
-
-              <p className="text-xs text-black/85 font-medium leading-relaxed">
-                {apiError?.message || error}
-              </p>
-
-              {apiError?.technicalDetails && (
-                <div className="p-3 bg-white/60 rounded-xl border border-rose-200/80 text-[11px] font-mono text-black overflow-x-auto space-y-1">
-                  <span className="font-bold text-black font-sans block">Technical Diagnostic:</span>
-                  <code className="text-rose-950 font-bold block">{apiError.technicalDetails}</code>
-                </div>
-              )}
-
-              <div className="pt-2 flex items-center gap-3">
-                <button
-                  onClick={loadInitialData}
-                  className="px-5 py-2 bg-black hover:bg-black/80 text-white rounded-full text-xs font-bold transition shadow-xs cursor-pointer"
-                >
-                  Retry Connection
-                </button>
-                <span className="text-[11px] text-black/70">
-                  Target Endpoint: <strong className="text-black font-mono">{apiError?.endpoint || '/api/stats'}</strong>
-                </span>
-              </div>
+              <p className="text-xs">{error}</p>
+              <button
+                onClick={loadInitialData}
+                className="px-4 py-1.5 bg-rose-700 text-white rounded-full text-xs font-medium"
+              >
+                Retry Connection
+              </button>
             </div>
           ) : (
             <>

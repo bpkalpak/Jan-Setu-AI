@@ -485,8 +485,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
 
           <button
-            onClick={() => onNavigatePage ? onNavigatePage('hotspots') : onNavigateToHotspots?.()}
-            className="inline-flex items-center gap-1 text-xs font-bold text-black hover:text-[#336443] transition self-start sm:self-auto bg-white/40 hover:bg-white/60 px-3 py-1.5 rounded-full border border-white/50 shadow-xs cursor-pointer"
+            onClick={onNavigateToHotspots}
+            className="inline-flex items-center gap-1 text-xs font-bold text-black hover:text-[#336443] transition self-start sm:self-auto bg-white/40 hover:bg-white/60 px-3 py-1.5 rounded-full border border-white/50 shadow-xs"
           >
             <span>View All Ranked Villages</span>
             <ArrowRight strokeWidth={1.75} className="w-3.5 h-3.5" />
